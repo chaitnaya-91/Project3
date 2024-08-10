@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usability Test Page</title>
+    <script>
+        function logInteraction(event) {
+            console.log(`User interaction: ${event.type} on ${event.target.tagName}`);
+        }
+
+        window.onload = function() {
+            document.body.addEventListener('click', logInteraction);
+            document.body.addEventListener('keypress', logInteraction);
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Webpage</h1>
+        <nav>
+            <a href="#product">Product</a>
+            <a href="#newsletter">Newsletter</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="product">
+        <h2>Product</h2>
+        <p>Find our products here.</p>
+        <button>Add to Cart</button>
+    </section>
+    <section id="newsletter">
+        <h2>Sign Up for Our Newsletter</h2>
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>chaitanyagaikwad@example.com</p>
+    </section>
+</body>
+</html>
